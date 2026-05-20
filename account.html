@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — Герои ВОВ</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="media/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo-link">
+        <img src="media/img/logo.svg" alt="Логотип">
+        <span class="logo-text">Герои ВОВ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Меню">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html#auth">Авторизация</a></li>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="route.html">Маршрут</a></li>
+          <li><a href="excursion.html">Расписание</a></li>
+          <li><a href="#" id="logout-btn">Выйти</a></li>
+          <li><button type="button" class="theme-toggle">☀ Светлая</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main container">
+    <h1 class="section-title">Личный кабинет</h1>
+
+    <div id="account-user-info" class="account-info"></div>
+
+    <h2 style="font-family:Georgia;margin-bottom:1rem">Запись на экскурсию</h2>
+    <form id="booking-form" class="form-panel booking-form">
+      <div class="form-group">
+        <label for="excursion">Экскурсия</label>
+        <select id="excursion" name="excursion" required>
+          <option value="">— выберите —</option>
+          <option>Монумент Победы на Поклонной горе</option>
+          <option>Музей Великой Отечественной войны</option>
+          <option>Главный храм Вооружённых сил России</option>
+          <option>Парковая аллея Героев</option>
+          <option>Фонтан «Слёзы горюют»</option>
+          <option>Триумфальная арка</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Дата</label>
+        <input type="date" id="date" name="date" value="2024-07-08" min="2024-07-08" max="2024-07-08" required>
+        <p class="form-hint">Доступна только дата: 8 июля 2024 г.</p>
+      </div>
+      <div class="form-group">
+        <label for="time">Время</label>
+        <select id="time" name="time" required>
+          <option value="">— выберите —</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="count">Количество человек</label>
+        <input type="number" id="count" name="count" min="1" max="15" value="1" required>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Записаться на экскурсию</button>
+      <div id="booking-message" class="form-message" role="alert"></div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <a href="tel:+74842234567">+7 (4842) 23-45-67</a> · <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const sel = document.getElementById('time');
+      for (let h = 9; h <= 21; h++) {
+        const o = document.createElement('option');
+        o.value = `${h}:00`;
+        o.textContent = `${h}:00 – ${h + 1}:00`;
+        sel.appendChild(o);
+      }
+    })();
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/account.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

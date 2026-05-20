@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание экскурсий — Герои ВОВ</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="media/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo-link">
+        <img src="media/img/logo.svg" alt="Логотип">
+        <span class="logo-text">Герои ВОВ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Меню">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="registration.html" class="nav-reg">Регистрация</a></li>
+          <li><a href="index.html#auth">Авторизация</a></li>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="route.html">Маршрут</a></li>
+          <li><a href="excursion.html">Расписание</a></li>
+          <li><button type="button" class="theme-toggle">☀ Светлая</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main container">
+    <h1 class="section-title">Расписание экскурсий</h1>
+    <p style="text-align:center;color:var(--text-secondary);max-width:720px;margin:0 auto 2rem">
+      Парк Победы, 8 июля 2024. В ячейках — число свободных мест. Квадратные слоты 48×48 px.
+    </p>
+
+    <div class="schedule-legend">
+      <span class="legend-item"><span class="slot-cell available" style="width:24px;height:24px;min-width:24px;min-height:24px">5</span> Есть места</span>
+      <span class="legend-item"><span class="slot-cell low" style="width:24px;height:24px;min-width:24px;min-height:24px">2</span> Мало мест</span>
+      <span class="legend-item"><span class="slot-cell full" style="width:24px;height:24px;min-width:24px;min-height:24px">—</span> Регистрация завершена</span>
+    </div>
+
+    <div class="schedule-wrap">
+      <table class="schedule-table" aria-label="Расписание экскурсий">
+        <thead>
+          <tr>
+            <th>Экскурсия</th>
+            <th>9:00–10:00</th>
+            <th>10:00–11:00</th>
+            <th>11:00–12:00</th>
+            <th>12:00–13:00</th>
+            <th>13:00–14:00</th>
+            <th>14:00–15:00</th>
+            <th>15:00–16:00</th>
+            <th>16:00–17:00</th>
+            <th>17:00–18:00</th>
+            <th>18:00–19:00</th>
+            <th>19:00–20:00</th>
+            <th>20:00–21:00</th>
+            <th>21:00–22:00</th>
+          </tr>
+        </thead>
+        <tbody id="schedule-body"></tbody>
+      </table>
+    </div>
+
+    <p style="text-align:center;margin-top:2rem">
+      <a href="account.html" class="btn btn-primary">Записаться в личном кабинете</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <a href="tel:+74842234567">+7 (4842) 23-45-67</a> · <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/excursion.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

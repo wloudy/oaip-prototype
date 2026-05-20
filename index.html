@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Герои Великой Отечественной Войны — Калмыкия тур</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="media/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo-link">
+        <img src="media/img/logo.svg" alt="Логотип">
+        <span class="logo-text">Герои ВОВ<span class="logo-sub">Калмыкия тур · Парк Победы</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="registration.html" class="nav-reg">Регистрация</a></li>
+          <li><a href="#auth">Авторизация</a></li>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#landmarks">Достопримечательности</a></li>
+          <li><a href="#search">Поиск</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+          <li><button type="button" class="theme-toggle" aria-label="Переключить тему">☀ Светлая</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <span class="star-deco" style="left:10%;top:20%">★</span>
+    <span class="star-deco" style="right:15%;top:40%;animation-delay:1s">★</span>
+    <span class="star-deco" style="left:40%;bottom:25%;animation-delay:2s">★</span>
+    <div class="hero-content container">
+      <h1>Маршрут героев у Парка Победы</h1>
+      <p>Патриотическая экскурсия по Поклонной горе в Москве — от Монумента Победы до Триумфальной арки. 2025 — Год Защитника Отечества.</p>
+      <a href="route.html" class="btn btn-primary">Подробнее о маршруте</a>
+    </div>
+  </section>
+
+  <section class="section container" id="slider">
+    <h2 class="section-title">Памятные места</h2>
+    <div class="slider" role="region" aria-label="Слайдер достопримечательностей">
+      <div class="slider-track">
+        <article class="slide">
+          <div class="slide-image"><img src="media/img/hero1.svg" alt="Монумент Победы"></div>
+          <div class="slide-body">
+            <h3>Монумент Победы</h3>
+            <p>Главный символ Парка Победы высотой 141,8 м — по числу дней войны. Смотровая площадка и музей у подножия.</p>
+            <a href="route.html" class="btn btn-secondary">Подробнее</a>
+          </div>
+        </article>
+        <article class="slide">
+          <div class="slide-image"><img src="media/img/hero1.svg" alt="Музей Победы" style="filter:hue-rotate(30deg)"></div>
+          <div class="slide-body">
+            <h3>Музей Великой Отечественной войны</h3>
+            <p>Крупнейший военно-исторический музей России: залы, диорамы, техника и Зал Славы.</p>
+            <a href="route.html" class="btn btn-secondary">Подробнее</a>
+          </div>
+        </article>
+        <article class="slide">
+          <div class="slide-image"><img src="media/img/hero1.svg" alt="Храм ВС РФ" style="filter:hue-rotate(60deg)"></div>
+          <div class="slide-body">
+            <h3>Главный храм ВС РФ</h3>
+            <p>Православный храм в честь воинов — часть мемориального ансамбля на Поклонной горе.</p>
+            <a href="route.html" class="btn btn-secondary">Подробнее</a>
+          </div>
+        </article>
+      </div>
+      <div class="slider-controls">
+        <button type="button" class="slider-btn slider-prev" aria-label="Предыдущий слайд">‹</button>
+        <div class="slider-dots">
+          <button type="button" class="slider-dot active" aria-label="Слайд 1"></button>
+          <button type="button" class="slider-dot" aria-label="Слайд 2"></button>
+          <button type="button" class="slider-dot" aria-label="Слайд 3"></button>
+        </div>
+        <button type="button" class="slider-btn slider-next" aria-label="Следующий слайд">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="history">
+    <div class="container history-block">
+      <div>
+        <h2 class="section-title" style="text-align:left">История и память</h2>
+        <p>Согласно <strong>Федеральному закону № 5-ФЗ «Об увековечении Победы»</strong>, мемориалы Великой Отечественной войны являются объектами культурного наследия народов России. Парк Победы на Поклонной горе открыт в 1995 году к 50-летию Победы; центральный монумент символизирует 1418 дней и ночей войны.</p>
+        <p>Элиста в годы войны отправила на фронт тысячи земляков; улицы города названы в честь Героев Советского Союза. Наш маршрут связывает память Калмыкии с общероссийским мемориалом в столице.</p>
+        <div class="timeline">
+          <div class="timeline-item"><strong>1941–1945</strong> — Великая Отечественная война</div>
+          <div class="timeline-item"><strong>1995</strong> — открытие Парка Победы в Москве</div>
+          <div class="timeline-item"><strong>2025</strong> — Год Защитника Отечества в России</div>
+        </div>
+      </div>
+      <div>
+        <img src="media/img/about.svg" alt="Парк Победы" style="border-radius:12px;border:1px solid var(--border)">
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="auth">
+    <h2 class="section-title">Авторизация</h2>
+    <form id="login-form" class="form-panel" style="max-width:420px;margin:0 auto" novalidate>
+      <div class="form-group">
+        <label for="login-email">E-mail</label>
+        <input type="email" id="login-email" name="email" required placeholder="family@cosmos.ru" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Пароль</label>
+        <input type="password" id="login-password" name="password" required placeholder="Пароль" autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Войти</button>
+      <p style="margin-top:1rem;text-align:center"><a href="registration.html">Регистрация</a> · <a href="#">Восстановить пароль</a></p>
+      <p class="form-hint" style="text-align:center;margin-top:0.5rem">Демо: family@cosmos.ru / Heroes2024!</p>
+      <div id="login-message" class="form-message" role="alert"></div>
+    </form>
+  </section>
+
+  <section class="section container" id="about">
+    <h2 class="section-title">О нас</h2>
+    <div class="about-grid">
+      <div>
+        <p>Туристическое агентство «Калмыкия тур» работает с 2008 года и специализируется на патриотических маршрутах Республики Калмыкия и столичных памятных мест. В 2025 году, объявленном в России Годом Защитника Отечества, мы расширили программу экскурсий и предлагаем авторский маршрут «Парк Победы на Поклонной горе» — один из крупнейших мемориальных комплексов страны, посвящённых подвигу советского народа в Великой Отечественной войне.</p>
+        <p>Наши гиды — сертифицированные экскурсоводы, прошедшие подготовку по программе Министерства культуры РФ. Мы сотрудничаем с Музеем Победы и используем материалы официальных путеводителей и публикаций фонда «Победа», чтобы рассказы о героях войны опирались на проверенные исторические источники.</p>
+        <p>Экскурсии проводятся на русском языке, доступны аудиогиды для слабовидящих. Группы до 15 человек. Запись на экскурсию — через сайт после регистрации. Жители Элисты и гостей Калмыкии могут добраться до Москвы железнодорожным транспортом; мы помогаем с рекомендациями по билетам и трансферу к месту сбора у метро «Парк Победы».</p>
+        <p>Миссия агентства — сохранять память о героях Великой Отечественной войны и делать историю доступной каждому поколению.</p>
+      </div>
+      <div class="about-image">
+        <img src="media/img/about.svg" alt="О компании Калмыкия тур">
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="welcome">
+    <h2 class="section-title">Приветствие организаторов</h2>
+    <div class="video-wrap">
+      <video controls poster="media/img/about.svg" width="800" height="450">
+        <source src="media/video/hello.mp4" type="video/mp4">
+        <p>Видео <code>media/video/hello.mp4</code> — добавьте файл из задания. Пока доступен постер.</p>
+      </video>
+    </div>
+  </section>
+
+  <section class="section container" id="landmarks">
+    <h2 class="section-title">Достопримечательности маршрута</h2>
+    <div class="cards-grid">
+      <article class="hero-card" data-surname="победа">
+        <div class="hero-card-img"><img src="media/img/hero1.svg" alt=""></div>
+        <div class="hero-card-body">
+          <h4>Монумент Победы на Поклонной горе</h4>
+          <p><strong>Маршрут:</strong> старт экскурсии. Скульптурные композиции у стелы рассказывают о ключевых сражениях.</p>
+        </div>
+      </article>
+      <article class="hero-card" data-surname="музей">
+        <div class="hero-card-img"><img src="media/img/hero1.svg" alt="" style="filter:hue-rotate(20deg)"></div>
+        <div class="hero-card-body">
+          <h4>Музей Великой Отечественной войны</h4>
+          <p>Официальный музей Минобороны: экспозиции по годам войны, Зал Славы, военная техника под открытым небом.</p>
+        </div>
+      </article>
+      <article class="hero-card" data-surname="храм">
+        <div class="hero-card-img"><img src="media/img/hero1.svg" alt="" style="filter:hue-rotate(40deg)"></div>
+        <div class="hero-card-body">
+          <h4>Главный храм Вооружённых сил России</h4>
+          <p>Храм-памятник с мозаиками и росписями о подвиге воинов всех родов войск.</p>
+        </div>
+      </article>
+      <article class="hero-card" data-surname="аллея">
+        <div class="hero-card-img"><img src="media/img/hero1.svg" alt="" style="filter:hue-rotate(60deg)"></div>
+        <div class="hero-card-body">
+          <h4>Парковая аллея Героев</h4>
+          <p>Аллея с бюстами полководцев и героев — место для церемониальных возложений.</p>
+        </div>
+      </article>
+      <article class="hero-card" data-surname="фонтан">
+        <div class="hero-card-img"><img src="media/img/hero1.svg" alt="" style="filter:hue-rotate(80deg)"></div>
+        <div class="hero-card-body">
+          <h4>Фонтан «Слёзы горюют»</h4>
+          <p>Мемориальный фонтан в память о погибших — одна из самых трогательных точек парка.</p>
+        </div>
+      </article>
+      <article class="hero-card" data-surname="арка">
+        <div class="hero-card-img"><img src="media/img/hero1.svg" alt="" style="filter:hue-rotate(100deg)"></div>
+        <div class="hero-card-body">
+          <h4>Триумфальная арка</h4>
+          <p>Копия исторической арки в честь победы 1812 года — финал пешего маршрута.</p>
+        </div>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:2rem">
+      <a href="route.html" class="btn btn-primary">Подробнее о маршруте</a>
+      <a href="excursion.html" class="btn btn-secondary" style="margin-left:0.5rem">Расписание</a>
+    </p>
+  </section>
+
+  <section class="section container" id="search">
+    <h2 class="section-title">Поиск по маршруту</h2>
+    <form id="hero-search-form" class="search-box">
+      <input type="search" name="q" list="hero-hints" placeholder="Введите название или ключевое слово…" autocomplete="off">
+      <datalist id="hero-hints">
+        <option value="Победа">
+        <option value="Музей">
+        <option value="Храм">
+        <option value="Аллея">
+        <option value="Фонтан">
+        <option value="Арка">
+      </datalist>
+      <button type="submit" class="btn btn-primary">Поиск</button>
+    </form>
+    <p id="search-result" class="form-hint" style="text-align:center;margin-top:1rem"></p>
+  </section>
+
+  <section class="section container" id="reviews">
+    <h2 class="section-title">Отзывы</h2>
+    <div class="reviews-slideset">
+      <article class="review-card active">
+        <div class="review-author">
+          <div class="review-avatar">АС</div>
+          <div>
+            <strong>Анна Смирнова</strong>
+            <div class="review-date">15.03.2024</div>
+          </div>
+        </div>
+        <p>Экскурсия по Парку Победы превзошла ожидания. Гид рассказал о каждом монументе с душой, дети были в восторге от Музея Победы.</p>
+        <a href="route.html" class="btn btn-secondary" style="margin-top:1rem">О маршруте</a>
+      </article>
+      <article class="review-card">
+        <div class="review-author">
+          <div class="review-avatar">ДК</div>
+          <div>
+            <strong>Дмитрий Козлов</strong>
+            <div class="review-date">22.04.2024</div>
+          </div>
+        </div>
+        <p>Очень познавательно! Узнали про 1418 дней войны у стелы. Рекомендую всем, кто хочет понять историю не по учебнику.</p>
+        <a href="route.html" class="btn btn-secondary" style="margin-top:1rem">О маршруте</a>
+      </article>
+      <article class="review-card">
+        <div class="review-author">
+          <div class="review-avatar">ЕВ</div>
+          <div>
+            <strong>Елена Волкова</strong>
+            <div class="review-date">08.05.2024</div>
+          </div>
+        </div>
+        <p>В День Победы ходили всей семьёй. Организация на высоте, время слотов удобное. Обязательно запишемся снова.</p>
+        <a href="route.html" class="btn btn-secondary" style="margin-top:1rem">О маршруте</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section container" id="subscribe">
+    <h2 class="section-title">Подписка на новости</h2>
+    <form id="subscribe-form" class="form-panel" style="max-width:480px;margin:0 auto">
+      <div class="form-group">
+        <label for="sub-email">Email</label>
+        <input type="email" id="sub-email" name="email" required placeholder="your@email.ru">
+      </div>
+      <div class="form-group checkbox-row">
+        <input type="checkbox" id="sub-consent" name="consent" required>
+        <label for="sub-consent">Согласен на обработку персональных данных</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Подписаться</button>
+      <div id="subscribe-message" class="form-message" role="alert"></div>
+    </form>
+  </section>
+
+  <footer class="site-footer" id="contacts">
+    <div class="container footer-grid">
+      <div>
+        <strong>Контакты</strong>
+        <p style="margin-top:0.75rem"><a href="tel:+74842234567">+7 (4842) 23-45-67</a></p>
+        <p><a href="mailto:family@cosmos.ru">family@cosmos.ru</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <strong>Навигация</strong>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="index-light.html">Главная-светлая</a></li>
+          <li><a href="registration.html">Регистрация</a></li>
+          <li><a href="#landmarks">Достопримечательности</a></li>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="404.html">Страница не найдена</a></li>
+        </ul>
+      </nav>
+      <div>
+        <strong>Экскурсии</strong>
+        <ul style="list-style:none;margin-top:0.75rem">
+          <li><a href="excursion.html">Расписание</a></li>
+          <li><a href="route.html">Маршрут</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">© 2025 «Калмыкия тур» — Герои Великой Отечественной Войны</div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

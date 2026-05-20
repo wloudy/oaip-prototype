@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="media/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo-link">
+        <img src="media/img/logo.svg" alt="Логотип">
+        <span class="logo-text">Герои ВОВ</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><button type="button" class="theme-toggle">☀ Светлая</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="error-page container">
+    <p class="error-code" aria-hidden="true">404</p>
+    <h1 class="section-title">Встреча не найдена</h1>
+    <p style="max-width:480px;color:var(--text-secondary);margin-bottom:2rem">
+      Запрошенная страница не существует или была перемещена. Вернитесь на главную или выберите раздел в меню.
+    </p>
+    <a href="index.html" class="btn btn-primary">На главную</a>
+    <a href="route.html" class="btn btn-secondary" style="margin-left:0.5rem">Маршрут</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <a href="tel:+74842234567">+7 (4842) 23-45-67</a> · <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

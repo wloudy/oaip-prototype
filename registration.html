@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — Герои ВОВ</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="media/img/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo-link">
+        <img src="media/img/logo.svg" alt="Логотип">
+        <span class="logo-text">Герои ВОВ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Меню">☰</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="registration.html">Регистрация</a></li>
+          <li><a href="index.html#auth">Авторизация</a></li>
+          <li><a href="account.html">Личный кабинет</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="route.html">Маршрут</a></li>
+          <li><a href="excursion.html">Расписание</a></li>
+          <li><button type="button" class="theme-toggle">☀ Светлая</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main container">
+    <h1 class="section-title">Регистрация на сайте</h1>
+
+    <form id="registration-form" class="form-panel" novalidate>
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required placeholder="name@example.ru" autocomplete="email">
+        <p id="email-hint" class="form-hint"></p>
+      </div>
+      <div class="form-group">
+        <label for="firstName">Имя *</label>
+        <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Фамилия *</label>
+        <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+      </div>
+      <div class="age-inputs">
+        <div class="form-group">
+          <label for="ageNumber">Возраст (число) *</label>
+          <input type="number" id="ageNumber" name="ageNumber" min="1" max="120" placeholder="35">
+        </div>
+        <div class="form-group">
+          <label for="ageRange">Возраст (список) *</label>
+          <input type="range" id="ageRange" name="ageRange" min="18" max="90" value="35" list="age-marks">
+          <datalist id="age-marks">
+            <option value="18"><option value="30"><option value="45"><option value="60"><option value="90">
+          </datalist>
+          <span class="form-hint">Ползунок: <output id="age-range-out">35</output> лет</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <span>Пол *</span>
+        <div style="display:flex;gap:1.5rem;margin-top:0.5rem">
+          <label class="checkbox-row"><input type="radio" name="gender" value="male" required> мужской</label>
+          <label class="checkbox-row"><input type="radio" name="gender" value="female"> женский</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль *</label>
+        <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+      </div>
+      <div class="form-group">
+        <label for="password2">Повтор пароля *</label>
+        <input type="password" id="password2" name="password2" required autocomplete="new-password">
+      </div>
+      <div class="form-group">
+        <label>Семейная фотография *</label>
+        <label class="upload-zone" for="photo">
+          <input type="file" id="photo" name="photo" accept="image/*" hidden>
+          <span>📷 Нажмите для загрузки или перетащите файл</span>
+        </label>
+      </div>
+
+      <fieldset class="family-block">
+        <legend>Члены семьи (демо-поля)</legend>
+        <div class="form-group">
+          <label>Фамилия</label>
+          <input type="text" name="familyLast" placeholder="Иванова">
+        </div>
+        <div class="form-group">
+          <label>Имя</label>
+          <input type="text" name="familyFirst" placeholder="Мария">
+        </div>
+        <div class="form-group">
+          <label>Возраст</label>
+          <input type="number" name="familyAge" min="0" max="120">
+        </div>
+        <div class="form-group">
+          <label>Пол</label>
+          <select name="familyGender">
+            <option value="">— выберите —</option>
+            <option value="male">мужской</option>
+            <option value="female">женский</option>
+          </select>
+        </div>
+        <div class="family-actions">
+          <button type="button" class="btn btn-secondary" disabled title="Добавление не реализовано по заданию">+ Добавить члена семьи</button>
+          <button type="button" class="btn btn-secondary" disabled>− Удалить</button>
+        </div>
+      </fieldset>
+
+      <div class="form-group checkbox-row">
+        <input type="checkbox" id="pd-consent" name="pdConsent" required>
+        <label for="pd-consent">Согласен на обработку персональных данных *</label>
+      </div>
+
+      <button type="submit" id="register-btn" class="btn btn-primary" style="width:100%" disabled>Зарегистрироваться</button>
+
+      <div id="reg-message" class="form-message" role="alert"></div>
+
+      <details style="margin-top:2rem" class="no-print">
+        <summary style="cursor:pointer;color:var(--text-muted)">Примеры сообщений (для отчёта)</summary>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1rem">
+          <button type="button" class="btn btn-secondary" onclick="showValidationDemo('success')">Корректные данные</button>
+          <button type="button" class="btn btn-secondary" onclick="showValidationDemo('error')">Некорректные</button>
+          <button type="button" class="btn btn-secondary" onclick="showValidationDemo('empty')">Не заполнено</button>
+        </div>
+      </details>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <a href="tel:+74842234567">+7 (4842) 23-45-67</a> · <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ageRange')?.addEventListener('input', (e) => {
+      document.getElementById('age-range-out').textContent = e.target.value;
+    });
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/registration.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
